@@ -12,7 +12,7 @@ describe("Exchange hack" , function(){
         //Let's deploy the ERC20 Contract
 
         const ERC20Factory = await ethers.getContractFactory("StokenERC20")
-        StokenERC20 = await ERC20Factory.deploy("1000") as StokenERC20
+        StokenERC20 = await ERC20Factory.deploy("100") as StokenERC20
         await StokenERC20.deployed()
 
         //Let's deploy the Exchange contract
