@@ -42,7 +42,7 @@ contract Exchange {
     function enter(uint256 amount) public {
         require(amount >= 10, "minimum is 10");
         token.transferFrom(msg.sender, address(this), amount); // The error is because it not check if
-        // The transaction succeeded
+        // The transaction succeeded will need to do double checks
         balances[msg.sender] += amount;
         emit Transfer(msg.sender, address(this), amount);
     }
